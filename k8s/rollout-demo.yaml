@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rollout-demo
+  name: rollout-demo-gerard
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: 'https://github.com/gerardtarrats/test2.git'
-    path: k8s/apps/rollout-demo
+    path: argo
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
